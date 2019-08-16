@@ -1,0 +1,10 @@
+.icon-button {
+    color: var(--font-color);
+    padding: 7px;
+    transition: 0.2s all ease-in-out;
+    
+    &:hover {
+        cursor: pointer;
+        color: var(--color-primary);
+    }
+}

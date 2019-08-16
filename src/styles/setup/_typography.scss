@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  font-family: "Muli", sans-serif;
+
+}
+
+
+.fc {
+  color: var(--font-color);
+}
+
+.fc-primary {
+  color: var(--color-primary);
+}
+
+body {
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    font-weight: 400px;
+    line-height: 20px;
+    // font-family: 'Poppins', sans-serif;
+    // font-family: "Noto Sans", sans-serif;
+    font-family: "Muli", sans-serif;
+    color: var(--font-color, #3d3d3d);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      padding: 0;
+      margin: 0;
+      font-weight: 400;
+      color: var(--font-color-primary, #1a1a1a);
+    }
+  
+    a {
+      text-decoration: none;
+      outline: none;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
