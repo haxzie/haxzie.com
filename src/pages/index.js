@@ -9,7 +9,7 @@ import DribbbleLogo from "../images/dribbble.svg";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Haxzie | Musthaq Ahamad" />
     <div className="background home">
       <div className="container">
         <div className="top-bar">
