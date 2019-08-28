@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import IconButton from "../components/IconButton";
 import GitHubLogo from "../images/github-logo.svg";
+import DribbbleLogo from "../images/dribbble.svg";
 
 
 const IndexPage = () => (
@@ -13,7 +14,11 @@ const IndexPage = () => (
       <div className="container">
         <div className="top-bar">
           <IconButton>menu</IconButton>
+          <div className="flex-expand"></div>
           <a href="https://github.com/m4q"  target="_blank">
+            <img className="logo-button" src={DribbbleLogo}/>
+          </a>
+          <a href="https://dribbble.com/haxzie"  target="_blank">
             <img className="logo-button" src={GitHubLogo}/>
           </a>
         </div>
