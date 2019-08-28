@@ -15,11 +15,11 @@ const IndexPage = () => (
         <div className="top-bar">
           <IconButton>menu</IconButton>
           <div className="flex-expand"></div>
-          <a href="https://github.com/m4q"  target="_blank">
-            <img className="logo-button" src={DribbbleLogo}/>
+          <a href="https://github.com/haxzie"  target="_blank">
+            <img className="logo-button" src={GitHubLogo}/>
           </a>
           <a href="https://dribbble.com/haxzie"  target="_blank">
-            <img className="logo-button" src={GitHubLogo}/>
+            <img className="logo-button" src={DribbbleLogo}/>
           </a>
         </div>
         <div className="home-contents">
