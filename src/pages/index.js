@@ -14,7 +14,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Haxzie | Musthaq Ahamad" />
-      <div className="background home">
+      <div className={`background home ${isNavigationVisible? 'overflow-hidden': ''}`}>
         <NavigationScreen isVisible={isNavigationVisible} closeNavigation={() => setNavigationVisibility(false)} />
         <div className="container">
           <div className="top-bar">

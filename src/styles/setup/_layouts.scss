@@ -165,6 +165,10 @@ div[role="group"][tabindex] {
 .home {
   position: relative;
 
+  &.overflow-hidden {
+    overflow: hidden;
+  }
+
   .home-contents {
     flex: 1;
     display: grid;
