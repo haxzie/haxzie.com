@@ -39,3 +39,5 @@ fields:
   type: boolean
   label: published
   default: false
+pages:
+- content/blogs/designing-user-centric-geo-spatial-dashboards/designing-user-centric-geo-spatial-dashboards.md
