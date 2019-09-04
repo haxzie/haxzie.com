@@ -1,4 +1,41 @@
 ---
 label: Blog post template
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: Title of the blog post
+- name: description
+  type: text
+  config:
+    required: false
+  label: description
+  description: Description of the blog post
+- name: date
+  type: datetime
+  description: Created date
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Date
+  default: now
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+  description: Tags for the blog post
+- name: cover_image
+  type: file
+  config:
+    maxSize: 250
+  label: Cover image
+  description: Imge to be used as the cover photo
+- name: published
+  type: boolean
+  label: published
+  default: false
