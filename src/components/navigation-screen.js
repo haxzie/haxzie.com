@@ -2,6 +2,7 @@ import React from 'react';
 import IconButton from './IconButton';
 import GitHubLogo from "../images/github-logo.svg";
 import DribbbleLogo from "../images/dribbble.svg";
+
 import { Link } from "gatsby";
 
 function NavigationScreen({ isVisible, closeNavigation }) {
@@ -35,7 +36,7 @@ function NavigationScreen({ isVisible, closeNavigation }) {
                             <div className="flex-col">
                                 <ul className="navigation-items">
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="/blog">Blog</a></li>
+                                    <li><Link to="/blog">Blog</Link></li>
                                     <li><a href="https://github.com/haxzie">GitHub</a></li>
                                     <li><a href="https://twitter.com/haxzie_">Twitter</a></li>
                                     <li><a href="https://linkedin.com/in/haxzie">LinkedIn</a></li>

@@ -1,0 +1,8 @@
+<svg width="100%" height="100%" viewBox="0 0 1000 1000" style="position: absolute; top: 0; z-index: -1;">
+  <defs>
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+    </filter>
+  </defs>
+  <image filter="url(#blur)" xlink:href="http://lorempixel.com/450/300/sports" x="0" y="0" height="300px" width="450px" />
+</svg>

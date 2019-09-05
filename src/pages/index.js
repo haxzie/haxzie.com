@@ -18,7 +18,9 @@ const IndexPage = () => {
         <NavigationScreen isVisible={isNavigationVisible} closeNavigation={() => setNavigationVisibility(false)} />
         <div className="container">
           <div className="top-bar">
-            <IconButton onClick={()=> setNavigationVisibility(true)}>menu</IconButton>
+            {
+              !isNavigationVisible? <IconButton onClick={()=> setNavigationVisibility(true)}>menu</IconButton> : <></>
+            }
             <div className="flex-expand"></div>
             <a href="https://github.com/haxzie" target="_blank" rel="noopener noreferrer">
               <img className="logo-button" src={GitHubLogo} alt="github link" />
