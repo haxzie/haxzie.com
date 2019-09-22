@@ -33,7 +33,7 @@ const IndexPage = () => {
             </div>
             <div className="home-contents">
               <div className="text-column">
-                <p className="heading">Hello there! I'm <span>Haxzie.</span><br /> Designer, Developer and Blogger.</p>
+                <p className="heading">Hello, there! I'm <span>Haxzie.</span><br /> Designer, Developer and Blogger.</p>
               </div>
             </div>
           </div>

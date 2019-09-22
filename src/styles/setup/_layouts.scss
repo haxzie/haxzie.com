@@ -120,10 +120,18 @@ div[role="group"][tabindex] {
 
   .icon-button {
     color: var(--font-color-dark) !important;
+    font-size: 24px;
+    padding: 7
   }
 
   @include respond-below(sm) {
     padding: 5px 0px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .logo-button {
@@ -187,7 +195,7 @@ div[role="group"][tabindex] {
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      margin: 50px 0;
+      margin: 50px 0 60px 0;
   
       span.fc {
         font-size: inherit;
@@ -199,7 +207,6 @@ div[role="group"][tabindex] {
         color: var(--font-color-unselected);
         font-size: 3em;
         letter-spacing: 7px;
-        line-height: 55px;
         padding: 7px;
   
         span {
