@@ -6,6 +6,7 @@ import SEO from "../components/seo";
 import IconButton from "../components/IconButton";
 import GitHubLogo from "../images/github-logo.svg";
 import DribbbleLogo from "../images/dribbble.svg";
+import BlogCard from "../components/BlogCard";
 
 
 const IndexPage = () => {
@@ -14,33 +15,36 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Haxzie | Musthaq Ahamad" />
-      <div className={`background home ${isNavigationVisible? 'overflow-hidden': ''}`}>
+      <div className={`background home ${isNavigationVisible ? 'overflow-hidden' : ''}`}>
         <NavigationScreen isVisible={isNavigationVisible} closeNavigation={() => setNavigationVisibility(false)} />
-        <div className="container">
-          <div className="top-bar">
-            {
-              !isNavigationVisible? <IconButton onClick={()=> setNavigationVisibility(true)}>menu</IconButton> : <></>
-            }
-            <div className="flex-expand"></div>
-            <a href="https://github.com/haxzie" target="_blank" rel="noopener noreferrer">
-              <img className="logo-button" src={GitHubLogo} alt="github link" />
-            </a>
-            <a href="https://dribbble.com/haxzie" target="_blank" rel="noopener noreferrer">
-              <img className="logo-button" src={DribbbleLogo} alt="dribbble link" />
-            </a>
-          </div>
-          <div className="home-contents">
-            <div className="text-column">
-              <p className="heading"><span className="fc">H</span>ELLO!</p>
-              <p className="sub-heading"><span>I'm</span> Ha<span className="fc">x</span>zie</p>
+        <div className="bg-dark">
+          <div className="container">
+            <div className="top-bar">
+              {
+                !isNavigationVisible ? <IconButton onClick={() => setNavigationVisibility(true)}>menu</IconButton> : <></>
+              }
+              <div className="flex-expand"></div>
+              <a href="https://github.com/haxzie" target="_blank" rel="noopener noreferrer">
+                <img className="logo-button" src={GitHubLogo} alt="github link" />
+              </a>
+              <a href="https://dribbble.com/haxzie" target="_blank" rel="noopener noreferrer">
+                <img className="logo-button" src={DribbbleLogo} alt="dribbble link" />
+              </a>
             </div>
-            <div className="home-illustration">
-              <div className="bar left" />
-              <div className="bar right" />
-              <div className="content-wrapper">
-                <p><span className="fc-primary">UX</span> Engineer</p>
-                <p><span className="fc-primary">Frontend</span> Dev</p>
+            <div className="home-contents">
+              <div className="text-column">
+                <p className="heading">Hello there! I'm <span>Haxzie.</span><br /> Designer, Developer and Blogger.</p>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="listing-area">
+          <div className="container">
+            <h1 className="page-title">Recent Blogs</h1>
+            <div className="blogs-listing">
+              <BlogCard/>
+              <BlogCard/>
+              <BlogCard/>
             </div>
           </div>
         </div>
