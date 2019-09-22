@@ -9,6 +9,7 @@ import IconButton from "../../components/IconButton";
 
 function BlogTemplate({ data }) {
     const metaData = data.markdownRemark.frontmatter;
+    const contents = data.markdownRemark.html;
 
     return (
         <>
@@ -34,6 +35,13 @@ function BlogTemplate({ data }) {
                         </div>
                     </div>
                 </div>
+                <div className={styles.blogArea}>
+                    <div className={styles.metaArea}>
+                        <label>{metaData.date}</label>
+                        <label>5 mins read</label>
+                    </div>
+                    <div className={styles.blogContents} dangerouslySetInnerHTML={{ __html: contents }}></div>
+                </div>
             </div>
         </>
     )
@@ -44,10 +52,11 @@ export default BlogTemplate;
 export const query = graphql`
     query BlogDataQuery($path: String!) {
         markdownRemark(frontmatter: { slug: { eq: $path } }) {
+            html
             frontmatter {
                 slug
                 title
-                date
+                date (formatString: "DD / MM / YYYY")
                 description
             }
         }
