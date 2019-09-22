@@ -240,7 +240,7 @@ div[role="group"][tabindex] {
       padding: 20px 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-gap: 20px;
+      grid-gap: 30px;
 
       @include respond-below(md) {
         grid-template-columns: 1fr;
