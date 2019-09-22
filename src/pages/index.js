@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
             </div>
             <div className="home-contents">
               <div className="text-column">
-                <p className="heading">Hello, there! I'm <span>Haxzie.</span><br /> Designer, Developer and Blogger.</p>
+                <p className="heading">Hello, there! I'm <span>Haxzie.</span><br /> UX Engineer and Visual Designer.</p>
               </div>
             </div>
           </div>

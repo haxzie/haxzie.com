@@ -215,7 +215,7 @@ div[role="group"][tabindex] {
       .heading {
         color: var(--font-color-unselected);
         font-size: 2.5em;
-        letter-spacing: 7px;
+        letter-spacing: 3px;
         padding: 7px;
   
         span {
@@ -224,7 +224,6 @@ div[role="group"][tabindex] {
   
         @include respond-below(sm) {
           font-size: 2em;
-          letter-spacing: 6px;
           line-height: 50px;
         }
       }
@@ -241,6 +240,7 @@ div[role="group"][tabindex] {
       opacity: 0.4;
       text-transform: uppercase;
       letter-spacing: 5px;
+      font-size: 1.3em;
 
       &:after {
         content: '';
