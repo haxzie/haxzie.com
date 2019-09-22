@@ -1,0 +1,53 @@
+@import '../../styles/setup/mixins';
+
+.blogTemplatePage {
+  .header {
+    background-color: var(--color-secondary-dark);
+
+    h3 {
+      color: var(--font-color-dark);
+      font-size: 1.3em;
+      margin-left: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+
+  .hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .text-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 50px 0 60px 0;
+
+      span.fc {
+        font-size: inherit;
+        letter-spacing: inherit;
+        color: var(--color-primary);
+      }
+
+      .heading {
+        color: var(--font-color-unselected);
+        font-size: 2.5em;
+        letter-spacing: 7px;
+        padding: 7px;
+
+        span {
+          color: var(--font-color-dark);
+        }
+
+        @include respond-below(sm) {
+          font-size: 2em;
+          letter-spacing: 6px;
+          line-height: 50px;
+        }
+      }
+    }
+  }
+}

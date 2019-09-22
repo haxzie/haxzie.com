@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { graphql } from 'gatsby';
 
 import Layout from "../components/layout";
-import NavigationScreen from "../components/navigation-screen";
 import SEO from "../components/seo";
 import IconButton from "../components/IconButton";
 import GitHubLogo from "../images/github-logo.svg";
@@ -9,20 +9,19 @@ import DribbbleLogo from "../images/dribbble.svg";
 import BlogCard from "../components/BlogCard";
 
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   const [isNavigationVisible, setNavigationVisibility] = useState(false);
+  const blogs = data.allMarkdownRemark.nodes
 
   return (
     <Layout>
       <SEO title="Haxzie | Musthaq Ahamad" />
       <div className={`background home ${isNavigationVisible ? 'overflow-hidden' : ''}`}>
-        <NavigationScreen isVisible={isNavigationVisible} closeNavigation={() => setNavigationVisibility(false)} />
         <div className="bg-dark">
           <div className="container">
             <div className="top-bar">
-              {
-                !isNavigationVisible ? <IconButton onClick={() => setNavigationVisibility(true)}>menu</IconButton> : <></>
-              }
+              <IconButton>whatshot</IconButton>
+              <h3>Haxzie</h3>
               <div className="flex-expand"></div>
               <a href="https://github.com/haxzie" target="_blank" rel="noopener noreferrer">
                 <img className="logo-button" src={GitHubLogo} alt="github link" />
@@ -42,9 +41,9 @@ const IndexPage = () => {
           <div className="container">
             <h1 className="page-title">Recent Blogs</h1>
             <div className="blogs-listing">
-              <BlogCard/>
-              <BlogCard/>
-              <BlogCard/>
+              {
+                blogs.map(item => <BlogCard data={item}/>)
+              }
             </div>
           </div>
         </div>
@@ -54,3 +53,30 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const blogsQuery = graphql`
+query blogsQuery {
+  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+    totalCount
+    nodes {
+      id
+      frontmatter {
+        slug
+        title
+        description
+        date(formatString: "DD/MM/YYYY")
+        tags
+        cover_image  {
+              publicURL
+              childImageSharp {
+                fluid(maxWidth: 1000) {
+                  srcSet
+                  tracedSVG
+                }
+              }
+            }
+      }
+    }
+  }
+}
+`

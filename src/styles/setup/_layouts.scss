@@ -124,6 +124,15 @@ div[role="group"][tabindex] {
     padding: 7
   }
 
+  h3 {
+    color: var(--font-color-dark);
+    font-size: 1.3em;
+    margin-left: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
   @include respond-below(sm) {
     padding: 5px 0px;
   }
