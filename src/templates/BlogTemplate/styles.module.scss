@@ -1,6 +1,9 @@
 @import "../../styles/setup/mixins";
 
 .blogTemplatePage {
+  position: relative;
+  padding-bottom: 100px;
+  
   .header {
     background-color: var(--color-secondary-dark);
 

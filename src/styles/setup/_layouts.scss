@@ -185,6 +185,8 @@ div[role="group"][tabindex] {
 }
 .home {
   position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px;
 
   .bg-dark {
     background: var(--color-secondary-dark);

@@ -5,7 +5,8 @@ import styles from './styles.module.scss';
 import GitHubLogo from "../../images/github-logo.svg";
 import DribbbleLogo from "../../images/dribbble.svg";
 import IconButton from "../../components/IconButton";
-
+import Footer from "../../components/Footer";
+import Comments from '../../components/Comments';
 
 function BlogTemplate({ data }) {
     const metaData = data.markdownRemark.frontmatter;
@@ -41,7 +42,9 @@ function BlogTemplate({ data }) {
                         <label>5 mins read</label>
                     </div>
                     <div className={styles.blogContents} dangerouslySetInnerHTML={{ __html: contents }}></div>
+                    <Comments />
                 </div>
+                <Footer />
             </div>
         </>
     )

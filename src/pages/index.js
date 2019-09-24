@@ -7,6 +7,7 @@ import IconButton from "../components/IconButton";
 import GitHubLogo from "../images/github-logo.svg";
 import DribbbleLogo from "../images/dribbble.svg";
 import BlogCard from "../components/BlogCard";
+import Footer from "../components/Footer";
 
 
 const IndexPage = ({ data }) => {
@@ -47,6 +48,7 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </Layout>
   )

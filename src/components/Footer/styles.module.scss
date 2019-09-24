@@ -1,0 +1,16 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    padding: 20px 50px;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-secondary-dark);
+    p {
+        color: var(--font-color-dark);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        opacity: 0.5;
+    }
+}
