@@ -48,7 +48,7 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Layout>
   )

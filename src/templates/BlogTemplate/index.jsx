@@ -7,13 +7,14 @@ import DribbbleLogo from "../../images/dribbble.svg";
 import IconButton from "../../components/IconButton";
 import Footer from "../../components/Footer";
 import Comments from '../../components/Comments';
+import Layout from '../../components/layout';
 
 function BlogTemplate({ data }) {
     const metaData = data.markdownRemark.frontmatter;
     const contents = data.markdownRemark.html;
 
     return (
-        <>
+        <Layout>
             <SEO title={metaData.title} description={metaData.description} />
             <div className={styles.blogTemplatePage}>
                 <div className={styles.header}>
@@ -44,9 +45,8 @@ function BlogTemplate({ data }) {
                     <div className={styles.blogContents} dangerouslySetInnerHTML={{ __html: contents }}></div>
                     <Comments />
                 </div>
-                <Footer />
             </div>
-        </>
+        </Layout>
     )
 }
 
