@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Haxzie | Musthaq Ahamad`,
-    description: `UX Engineer, Hobbyist designer and developer, Tech Blogger`,
+    description: `UX Engineer, Hobbyist designer, developer and Tech Blogger`,
     author: `@haxzie`,
   },
   plugins: [
