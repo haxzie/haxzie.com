@@ -1,17 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import SEO from '../../components/seo';
 import { graphql } from 'gatsby';
 import styles from './styles.module.scss';
 import GitHubLogo from "../../images/github-logo.svg";
 import DribbbleLogo from "../../images/dribbble.svg";
 import IconButton from "../../components/IconButton";
-import Footer from "../../components/Footer";
 import Comments from '../../components/Comments';
 import Layout from '../../components/layout';
 
 function BlogTemplate({ data }) {
     const metaData = data.markdownRemark.frontmatter;
     const contents = data.markdownRemark.html;
+
+    // useEffect(() => {
+    //     return () => {
+    //         window.scrollTo(0, 0);
+    //     }
+    // }, []);
 
     return (
         <Layout>
