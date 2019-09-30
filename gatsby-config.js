@@ -3,10 +3,12 @@ module.exports = {
     title: `Haxzie | Musthaq Ahamad`,
     description: `UX Engineer, Hobbyist designer, developer and Tech Blogger`,
     author: `@haxzie`,
+    siteUrl: `https://haxzie.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -38,7 +40,7 @@ module.exports = {
         background_color: `#151a24`,
         theme_color: `#151a24`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/haxzie.png`, // This path is relative to the root of the site.
       },
     },
     {
