@@ -7,7 +7,7 @@ tags:
 - User Research
 - Design
 title: "The Design Process: from thoughts to visuals- Designing a SaaS product (part 1)"
-description: I'll take you through our journey of designing a SaaS product. I'll talk about Lessons learned on every major decision we took in terms of design and research.
+description: Good designs can solve complex problems by abstracting away the complexity from users. I was always fascinated by the fact that how design blinds the complexity with beauty, simplicity, and clarity.
 cover_image: ./cover.jpg
 published: false
 ---
