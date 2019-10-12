@@ -78,7 +78,7 @@
     h3,
     h4 {
       //font-family: "Source Serif Pro", sans-serif;
-      padding-top: 20px;
+      padding: 20px 0 10px 0;
       font-weight: bold;
     }
 
@@ -138,6 +138,7 @@
       font-weight: bold;
       letter-spacing: 1em;
       text-align: center;
+      padding: 20px 0;
 
       &:before {
         content: "...";
@@ -148,7 +149,7 @@
     }
     pre {
       font-size: 1.2em;
-      border-radius: 5px;
+      border-radius: 2px;
     }
   }
 }
