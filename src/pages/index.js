@@ -21,7 +21,6 @@ const IndexPage = ({ data }) => {
         <div className="bg-dark">
           <div className="container">
             <div className="top-bar">
-              <IconButton>whatshot</IconButton>
               <h3>Haxzie</h3>
               <div className="flex-expand"></div>
               <a href="https://github.com/haxzie" target="_blank" rel="noopener noreferrer">
@@ -33,7 +32,7 @@ const IndexPage = ({ data }) => {
             </div>
             <div className="home-contents">
               <div className="text-column">
-                <p className="heading">Hello, there! I'm <span>Haxzie.</span><br /> UX Engineer and Visual Designer.</p>
+                <p className="heading">Hello, there! I'm <span>Musthaq Ahamad.</span><br /> UX Engineer and Visual Designer.</p>
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@
 .blogTemplatePage {
   position: relative;
   padding-bottom: 100px;
-  
+
   .header {
     background-color: var(--color-secondary-dark);
 
@@ -121,9 +121,10 @@
       }
     }
 
-    ul, ol {
+    ul,
+    ol {
       margin: 0;
-      padding: 20px;
+      padding: 0 20px;
       font-size: 1.3em;
       line-height: 2em;
       li {
@@ -139,8 +140,15 @@
       text-align: center;
 
       &:before {
-        content: '...';
+        content: "...";
       }
+    }
+    code {
+      padding: 0 5px;
+    }
+    pre {
+      font-size: 1.2em;
+      border-radius: 5px;
     }
   }
 }

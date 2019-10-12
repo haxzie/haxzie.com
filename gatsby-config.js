@@ -26,6 +26,12 @@ module.exports = {
               maxWidth: 1080,
             },
           },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              showLineNumbers: true,
+            }
+          }
         ],
       }
     },
