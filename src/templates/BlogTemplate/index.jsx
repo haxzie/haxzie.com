@@ -20,7 +20,21 @@ function BlogTemplate({ data }) {
 
     return (
         <Layout>
-            <SEO title={metaData.title} description={metaData.description} />
+            <SEO title={metaData.title} description={metaData.description} 
+                    meta={[
+                            { 'og:site_name': 'haxzie.com'},
+                            { 'og:locale': 'en_US'},
+                            { 'article:published_time': metaData.date }, 
+                            { "article:modified_time": metaData.date },
+                            { "last-modified": metaData.date},
+                            { 'og:image': metaData.cover_image.publicURL},
+                            { 'og:title': metaData.title },
+                            { 'og:description': metaData.description },
+                            { 'og:type': 'article'},
+                            { 'twitter:card': 'summary'},
+                            { 'twitter:title': metaData.title },
+                            { 'twitter:description': metaData.description}
+                        ]} />
             <div className={styles.blogTemplatePage}>
                 <div className={styles.header}>
                     <div className="container">
@@ -66,6 +80,9 @@ export const query = graphql`
                 title
                 date (formatString: "DD / MM / YYYY")
                 description
+                cover_image {
+                    publicURL
+                }
             }
         }
     }
