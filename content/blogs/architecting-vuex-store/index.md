@@ -12,7 +12,7 @@ cover_image: ./cover.png
 published: false
 ---
 
-At the heart of all large scale Vue.js application lies the store which holds all its data. The Vuex store in a Vue.js application acts as a single source of truth which provides great performance and reactivity out of the box. Vuex store gets cluttered with the growing complexity of the applications. 
+At the heart of all large-scale Vue.js application lies the store which holds all its data. The Vuex store in a Vue.js application acts as a single source of truth which provides great performance and reactivity out of the box. As your application grows in complexity and code, Vuex stores get easily cluttered and become hard to manage. Architecting the state management of your application with best practices can solve most of the problems that grow with complexity. 
 
 In this blog post, we'll discuss some of the best practices and tips to architect state management on a large scale Vue.js application. We'll cover the following 5 concepts to help architect your store better.
 
