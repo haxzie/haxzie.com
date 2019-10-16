@@ -6,6 +6,7 @@ import SEO from "../components/seo";
 import IconButton from "../components/IconButton";
 import GitHubLogo from "../images/github-logo.svg";
 import DribbbleLogo from "../images/dribbble.svg";
+import DevLogo from "../images/devto.svg";
 import BlogCard from "../components/BlogCard";
 import Footer from "../components/Footer";
 
@@ -23,6 +24,9 @@ const IndexPage = ({ data }) => {
             <div className="top-bar">
               <h3>Haxzie</h3>
               <div className="flex-expand"></div>
+              <a href="https://dev.to/haxzie" target="_blank" rel="noopener noreferrer">
+                <img className="logo-button" src={DevLogo} alt="dev link" />
+              </a>
               <a href="https://github.com/haxzie" target="_blank" rel="noopener noreferrer">
                 <img className="logo-button" src={GitHubLogo} alt="github link" />
               </a>

@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 import SEO from '../../components/seo';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import styles from './styles.module.scss';
 import GitHubLogo from "../../images/github-logo.svg";
 import DribbbleLogo from "../../images/dribbble.svg";
+import DevLogo from "../../images/devto.svg";
 import IconButton from "../../components/IconButton";
 import Comments from '../../components/Comments';
 import Layout from '../../components/layout';
@@ -20,28 +21,33 @@ function BlogTemplate({ data }) {
 
     return (
         <Layout>
-            <SEO title={metaData.title} description={metaData.description} 
-                    meta={[
-                            { 'og:site_name': 'haxzie.com'},
-                            { 'og:locale': 'en_US'},
-                            { 'article:published_time': metaData.date }, 
-                            { "article:modified_time": metaData.date },
-                            { "last-modified": metaData.date},
-                            { 'og:image': metaData.cover_image.publicURL},
-                            { 'og:title': metaData.title },
-                            { 'og:description': metaData.description },
-                            { 'og:type': 'article'},
-                            { 'twitter:card': 'summary'},
-                            { 'twitter:title': metaData.title },
-                            { 'twitter:description': metaData.description}
-                        ]} />
+            <SEO title={metaData.title} description={metaData.description}
+                meta={[
+                    { 'og:site_name': 'haxzie.com' },
+                    { 'og:locale': 'en_US' },
+                    { 'article:published_time': metaData.date },
+                    { "article:modified_time": metaData.date },
+                    { "last-modified": metaData.date },
+                    { 'og:image': metaData.cover_image.publicURL },
+                    { 'og:title': metaData.title },
+                    { 'og:description': metaData.description },
+                    { 'og:type': 'article' },
+                    { 'twitter:card': 'summary' },
+                    { 'twitter:title': metaData.title },
+                    { 'twitter:description': metaData.description }
+                ]} />
             <div className={styles.blogTemplatePage}>
                 <div className={styles.header}>
                     <div className="container">
                         <div className="top-bar">
-                            <IconButton onClick={() => window.history.back()}>arrow_back</IconButton>
+                            <Link to="/">
+                                <IconButton onClick={() => { }}>arrow_back</IconButton>
+                            </Link>
                             <h3>Blogs</h3>
                             <div className="flex-expand"></div>
+                            <a href="https://dev.to/haxzie" target="_blank" rel="noopener noreferrer">
+                                <img className="logo-button" src={DevLogo} alt="dev link" />
+                            </a>
                             <a href="https://github.com/haxzie" target="_blank" rel="noopener noreferrer">
                                 <img className="logo-button" src={GitHubLogo} alt="github link" />
                             </a>
