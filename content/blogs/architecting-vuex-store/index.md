@@ -161,13 +161,11 @@ store/
 /**
  * Automatically imports all the modules and exports as a single module object
  */
-const requireModule = require.context('.', false,  /\.js$/);
+const requireModule = require.context('.', false,  /\.store\.js$/);
 const modules = {};
 
 requireModule.keys().forEach(filename => {
-    // Don't register this file as a Vuex module
-    if (filename === './index.js') return;
-    
+
     // create the module name from fileName
     // remove the store.js extension and capitalize
     const moduleName = filename
@@ -217,9 +215,7 @@ const initialState = () => ({
     variable3: value
 });
 
-const state = {
-    ...initialState()
-}
+const state = initialState();
 ```
 
 Now we have a separate initial state, any changes we make to the state will not affect the actual initial value. So, we can use this to reset the store. Create a mutation function that basically mutates the entire store object with the initial state.
@@ -231,9 +227,7 @@ const initialState = () => ({
     variable3: value
 });
 
-const state = {
-    ...initialState()
-}
+const state = initialState();
 // Getters
 
 // Actions
@@ -274,9 +268,7 @@ Vue.use(Vuex);
 const debug = process.env.NODE_ENV !== 'production';
 
 export default new Vuex.Store({
-  modules: {
-    ...modules
-  },
+  modules,
   actions: {
     reset({commit}) {
       // resets state of all the modules
