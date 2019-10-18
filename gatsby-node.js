@@ -13,7 +13,7 @@ exports.createPages = ({ actions, graphql }) => {
                     id
                     frontmatter {
                         slug
-                        tags
+                        published
                     }
                 }
                 
@@ -25,13 +25,18 @@ exports.createPages = ({ actions, graphql }) => {
             return Promise.reject(res.errors);
         }
         res.data.allMarkdownRemark.nodes.forEach(item => {
-            // create an underscored slug as => username_map_style
-            let slug = item.frontmatter.slug;
-            createPage({
-                path: slug,
-                component: BlogTemplate,
-                context: 'hello'
-            });
+            // pick only blogs which has published set to true
+            if (item.frontmatter.published) {
+                console.log(JSON.stringify(item, null, 2))
+                let slug = item.frontmatter.slug;
+                createPage({
+                    path: slug,
+                    component: BlogTemplate,
+                    context: {
+                        id: item.id
+                    }
+                });
+            }
         })
     })
 }

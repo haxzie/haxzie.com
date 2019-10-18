@@ -9,7 +9,7 @@ tags:
 title: "Architecting Vuex store for large scale Vue.js applications"
 description: At the heart of all large scale Vue.js application lies the store which holds all its data. The Vuex store in a Vue.js application acts a a single source of truth which provides great performance and reactivity out of the box.
 cover_image: ./cover.png
-published: false
+published: true
 ---
 
 At the heart of all large-scale Vue.js application lies the store which holds all its data. The Vuex store in a Vue.js application acts as a single source of truth which provides great performance and reactivity out of the box. As your application grows in complexity and code, Vuex stores get easily cluttered and become hard to manage. Architecting the state management of your application with best practices can solve most of the problems that grow with complexity. 
@@ -235,7 +235,10 @@ const state = initialState();
 // Mutations
 const mutations = {
     RESET(state) {
-      state = initialState();
+      const newState = initialState();
+      Object.keys(newState).forEach(key => {
+            state[key] = newState[key]
+      });
     },
     // other mutations
 }

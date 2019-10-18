@@ -61,7 +61,7 @@ export default IndexPage
 
 export const blogsQuery = graphql`
 query blogsQuery {
-  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: { published: { eq: true}}}) {
     totalCount
     nodes {
       id

@@ -10,8 +10,7 @@ title: Building complex geo-spatial dashboards with user centric design
 description: Dashboards are complex screens with tons of information thrown at a user.
   See how we built a complex dashboard with iterative research and designs.
 cover_image: ./work_overtime_2x.jpg
-published: false
-
+published: true
 ---
 
 Having an overall view of your business, or system can give you a lot of insight about how well each part of your system is performing. This helps business users or anyone associated to take quick and strategic decisions. Dashboards and dashboarding tools isn't just a magic wand for a particular field, it is a general solution for most of the **visibility problems** exist in any organisation, business or system. From monitoring the status of space crafts using live dashboards to tiny dashboards within apps that shows your daily calories burned, they are everywhere!

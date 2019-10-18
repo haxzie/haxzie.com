@@ -9,7 +9,7 @@ tags:
 title: "The Design Process: from thoughts to visuals- Designing a SaaS product (part 1)"
 description: Good designs can solve complex problems by abstracting away the complexity from users. I was always fascinated by the fact that how design blinds the complexity with beauty, simplicity, and clarity.
 cover_image: ./cover.jpg
-published: false
+published: true
 ---
 Good designs can solve complex problems by abstracting away the complexity from users. I was always fascinated by the fact that how design blinds the complexity with **beauty**, **simplicity**, and **clarity**. Before taking up my first job as a UX Engineer at [Locale.ai](https://locale.ai), I was curious about how visual design in digital products makes human interactions natural, and how these designs align with human psychology to make the experience seamless. After landing my first job in a startup, I was so excited to be part of a journey where the path defined by us. In this blog post series, I'll take you through our journey of designing a SaaS product. We'll talk about Lessons learned on every major decision we took in terms of design and research. The following points describe how I usually design in my day to day work and are highly opinionated :)
 <hr/>
