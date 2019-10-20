@@ -276,7 +276,7 @@ Axios adapters provide abilities to add superpowers into your HttpClient. Custom
 
 Install axios-extensions
 ```shell
-$ npm install --save axios-extension
+$ npm install --save axios-extensions
 ```
 ### Caching
 ```javascript
