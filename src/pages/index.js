@@ -46,7 +46,7 @@ const IndexPage = ({ data }) => {
             <h1 className="page-title">Recent Blogs</h1>
             <div className="blogs-listing">
               {
-                blogs.map(item => <BlogCard data={item}/>)
+                blogs.map(item => <BlogCard data={item} key={item.id}/>)
               }
             </div>
           </div>
