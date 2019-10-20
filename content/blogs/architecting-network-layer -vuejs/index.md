@@ -8,14 +8,14 @@ tags:
 - Engineering
 - Architecting
 title: "Architecting HTTP clients in Vue.js applications for effective network communication"
-description: The network layer of a Vue.js application is the entry point of all the external data into your application. HTTP clients, which makes this possible needs to be designed to be efficient and should be able to handle all the edge cases in communicating with external APIs.
+description: The network layer of a Vue.js application is the entry point of all the external data into your application. HTTP clients, which makes this possible need to be designed to be efficient and should be able to handle all the edge cases in communicating with external APIs.
 cover_image: ./cover.png
 published: true
 ---
 
 Modern web apps highly rely on network communication with API servers and external services. From real-time data to static assets, everything is done through the network connection. It is important to design the network interface layer or the **HTTP client** which helps your application to call the API endpoints to be efficient and robust. In this article we'll discuss ways to design the HTTP clients and making network requests in your Vue.js application, considering some of the best practices and techniques.
 
-We'll look into the following concepts in detail and how to implement them in our application. I prefer using [Axios](https://github.com/axios/axios) since it gives more flexibility, control, and has exceptional browser and node.js support.
+We'll look into the following concepts in detail and how to implement them in our application. I prefer using [Axios](https://github.com/axios/axios) since it gives more flexibility, control, and has an exceptional browser and node.js support.
 
 1. Creating HTTP Clients using axios instances
 2. Structuring your API endpoints
@@ -24,15 +24,15 @@ We'll look into the following concepts in detail and how to implement them in ou
 5. Handling network errors and logging
 6. Caching and Throttling
 
-_Before we start, the code snippets below are written keeping Vue.js developers in mind. But, these can also be used for React or any other frontent library/framework._
+_Before we start, the code snippets below are written keeping Vue.js developers in mind. But, these can also be used for React or any other frontend library/framework._
 
-This is the second part of "Architecting Vue application" series. You can find the first part here where I talk about how to [Architect Vuex store for large-scale Vue.js applications](https://haxzie.com/architecting-vuex-store-large-scale-vue-application).
+This is the second part of the "Architecting Vue application" series. You can find the first part here where I talk about how to [Architect Vuex store for large-scale Vue.js applications](https://haxzie.com/architecting-vuex-store-large-scale-vue-application).
 
 <hr/>
 
 
 ## 1. Creating HTTP Clients using axios instances
-Axios provides out of the box support for having persistent configuration for API calls using axios instances. We'll be using axios instances as HTTP clients in our application with our configurations. If you are working on a large scale application, it is possible that your application needs to communicate with different API endpoints. In this case we might need to create multiple axios instances, with it's own configuration and seperate them out to individual files.
+Axios provides out of the box support for having a persistent configuration for all of our API calls using axios instances. We'll be using axios instances as HTTP clients in our application with our configurations. If you are working on a large scale application, it is possible that your application needs to communicate with different API endpoints. In this case, we might need to create multiple axios instances, with its own configuration and separate them out to individual files.
 
 **Install axios in your project**
 ```javascript
@@ -41,11 +41,11 @@ $ npm install --save axios
 
 **Import axios into your project**
 
-Considering best practices, it is recommended to add API urls into `.env` files while developing large scale application. In Vue.js applications, to be able to acces the **env** variables inside your project, we need to prefix it as `VUE_APP_`. So, if you want to save **BASE_URL**, create a .env file in the root of your project directory and add the following line.
+Considering best practices, it is recommended to add API URLs into `.env` files while developing large scale applications. In Vue.js applications, to be able to access the **env** variables inside your project, we need to prefix it as `VUE_APP_`. So, if you want to save **BASE_URL**, create a .env file in the root of your project directory and add the following line.
 ```shell
 VUE_APP_BASE_URL=https://myApiServerUrl.com
 ```
-Once we have our environment variables in place, we can retrieve them while creating axios instances. We can additionally pass all our configuration into this instace, including headers and use this instance to create HTTP requests.
+Once we have our environment variables in place, we can retrieve them while creating axios instances. We can additionally pass all our configuration into this instance, including headers and use this instance to create HTTP requests.
 ```javascript 
 import axios from axios;
 
@@ -59,7 +59,7 @@ const httpClient = axios.create({
 
 export default httpClient;
 ```
-One more thing to keep in mind is that, Axios by default has the timeout set to **0**, which means no timeout. But in most cases, we need to set request timeouts in our application along with a retry period. We will discuss how to retry a failed request in below sections but you can change the default timeout of our httpClient while creating it.
+One more thing to keep in mind, Axios by default has the timeout set to **0**, which means no timeout. But in most cases, we need to set request timeouts in our application along with a retry period. We will discuss how to retry a failed request in the below sections but you can change the default timeout of our httpClient while creating it.
 ```javascript
 const httpClient = axios.create({
     baseUrl: process.env.VUE_APP_BASE_URL,
@@ -73,7 +73,7 @@ const httpClient = axios.create({
 <hr/>
 
 ## 2. Structuring your API endpoints
-As per REST design principles, most of our endpoints might have CURD operations associated with it. So, grouping together the endpoint with all it's request methods is one way to organize your api calls. We can import the required http-client and export all the required requests as methods. Here's an example of grouping all the request related to `Users` into a single file. 
+As per REST design principles, most of our endpoints might have CURD operations associated with it. So, grouping together the endpoint with all it's request methods is one way to organize your API calls. We can import the required HTTP-client and export all the required requests as methods. Here's an example of grouping all the requests related to `Users` into a single file. 
 
 ```javascript
 import httpClient from './httpClient';
@@ -223,7 +223,7 @@ export default httpClient;
 <hr/>
 
 ## 5. Handling network errors and logging
-Is it easy as `response.status === 500` in every request? It's not ideal to check the status and logging these errors in every network request we make inside our actions. Instead, axios offers abilities to intercept the error responses, which is a perfect spot to find errors, log or show a cute notification to the user saying the server effed up. We can also use this to log-out the user from your application if the requests aren't authorized or if the server informs of an expired session.
+Is it easy as `response.status === 500` in every request? It's not ideal to check the status and logging these errors in every network request we make inside our actions. Instead, axios offer abilities to intercept the error responses, which is a perfect spot to find errors, log or show a cute notification to the user saying the server effed up. We can also use this to log-out the user from your application if the requests aren't authorized or if the server informs of an expired session.
 
 In the below example, I am using [vue-notifications](https://github.com/euvl/vue-notification) to show tiny notifications on the screen
 
@@ -272,7 +272,7 @@ httpClient.interceptors.response.use(responseInterceptor, errorInterceptor);
 <hr/>
 
 ## 6. Caching and Throttling
-Axios adapters provide abilities to add superpowers into your HttpClient. Custom adapters are a clean way to enhance the network communication in your application using caching and throttling. We'll be using [axios-extensions](https://github.com/kuitos/axios-extensions) to attach caching and throttling adapters to our httpClient.
+Axios adapters provide abilities to add superpowers into your HttpClient. Custom adapters are a clean way to enhance network communication in your application using caching and throttling. We'll be using [axios-extensions](https://github.com/kuitos/axios-extensions) to attach caching and throttling adapters to our httpClient.
 
 Install axios-extensions
 ```shell
@@ -309,9 +309,9 @@ getUsers(); // from cache
 ```
 
 ### Throttling
-In our use case, throttling means limiting the amount of requests made in a particular amount of time. In large scale applications where each request to the server amounts to a larger cost of computing, caching is one way to achieve throttling. 
+In our use case, throttling means limiting the number of requests made in a particular amount of time. In large scale applications where each request to the server amounts to a larger cost of computing, caching is one way to achieve throttling. 
 
-What if there is new data coming in every once and then? In that case, we can use throttling to respond from cache for a limited time and then make an actual request after the specified time period. [Axios-extensions](https://github.com/kuitos/axios-extensions) comes with a **throttleAdapterEnhancer** which can be used to throttle the network request in our application. If we are using throttling, we can avoid using persistent cache for time sensitive data.
+What if there is new data coming in every once and then? In that case, we can use throttling to respond from cache for a limited time and then make an actual request after the specified time period. [Axios-extensions](https://github.com/kuitos/axios-extensions) comes with a **throttleAdapterEnhancer** which can be used to throttle the network request in our application. If we are using throttling, we can avoid using persistent cache for time-sensitive data.
 
 ```javascript
 import axios from 'axios';
@@ -342,7 +342,7 @@ setTimeout(() => {
 ```
 <hr/>
 
-Thanks for reading this article 💖. Liked the article? have some feedbacks or suggestions? leave a comment. This will help me understand better and write more amazing articles for you 🙂.
+Thanks for reading this article 💖. Liked the article? have some feedback or suggestions? leave a like and a comment. This will help me understand better and write more amazing articles for you 🙂.
 
 ## What's next?
-In my upcoming posts, we'll discuss more about Architecting large scale Vue.js applications in terms of performance and your productivity.
+In my upcoming posts, we'll discuss more Architecting large scale Vue.js applications in terms of performance and your productivity.
