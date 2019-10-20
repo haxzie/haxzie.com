@@ -1,6 +1,6 @@
 ---
 date: 2019-10-20
-slug: /architecting-http=clients-vue-js-network-layer
+slug: /architecting-http-clients-vue-js-network-layer
 tags:
 - Vue
 - Axios
