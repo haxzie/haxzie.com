@@ -329,7 +329,7 @@ const httpClient = axios.create({
 export default httpClient;
 ```
 
-If we have set up throttling, Same requests made within the thresold period will be responded from the cache. Only real request is made after the threshold period.
+If we have set up throttling, Same requests made within the threshold period will be responded from the cache. Only real request is made after the threshold period.
 ```javascript
 getUsers(); // actual request
 getUsers(); // responds from cache
