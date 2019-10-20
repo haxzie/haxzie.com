@@ -7,7 +7,7 @@ tags:
 - Frontend
 - Engineering
 - Architecting
-title: "Architecting HTTP clients in Vue.js applications for effective network communication"
+title: "Architecting HTTP clients in Vue.js applications for efficient network communication"
 description: The network layer of a Vue.js application is the entry point of all the external data into your application. HTTP clients, which makes this possible need to be designed to be efficient and should be able to handle all the edge cases in communicating with external APIs.
 cover_image: ./cover.png
 published: true
