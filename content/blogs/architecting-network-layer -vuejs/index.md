@@ -268,7 +268,7 @@ httpClient.interceptors.response.use(responseInterceptor, errorInterceptor);
 ## 6. Caching and Throttling
 Axios adapters provide abilities to add superpowers into your HttpClient. Custom adapters are a clean way to enhance network communication in your application using caching and throttling. We'll be using [axios-extensions](https://github.com/kuitos/axios-extensions) to attach caching and throttling adapters to our httpClient.
 
->Note that caching from client side is not recommended because your server has more knowledge on when the data changes. It is better to set the cache headers to tell the browser what caching strategy to use. You can follow the below examples, if you still want to use caching from the client side.
+_Note that caching from client side is not recommended because your server has more knowledge on when the data changes. It is better to set the cache headers to tell the browser what caching strategy to use. You can follow the below examples, if you still want to use caching from the client side._
 
 Install axios-extensions
 ```shell
@@ -309,7 +309,7 @@ In our use case, throttling means limiting the number of requests made in a part
 
 What if there is new data coming in every once and then? In that case, we can use throttling to respond from cache for a limited time and then make an actual request after the specified time period. [Axios-extensions](https://github.com/kuitos/axios-extensions) comes with a **throttleAdapterEnhancer** which can be used to throttle the network request in our application. If we are using throttling, we can avoid using a persistent cache.
  
-> keep in mind it is not recommended to use throttling for time-sensitive data. If your data changes quite often, your server is the only entity that knows about the data. Use cache headers instead to let the browser know about what caching strategy to use.
+_keep in mind it is not recommended to use throttling for time-sensitive data. If your data changes quite often, your server is the only entity that knows about the data. Use cache headers instead to let the browser know about what caching strategy to use._
 
 ```javascript
 import axios from 'axios';
