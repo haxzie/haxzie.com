@@ -133,7 +133,7 @@ const getters = {
 const actions = {
     async fetchUsers({ commit }) {
             try {
-                const response = getAllUsers();
+                const response = await getAllUsers();
                 commit('SET_USERS', response.data);
             } catch (error) {
                 // handle the error here
