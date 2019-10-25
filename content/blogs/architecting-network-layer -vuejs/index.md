@@ -309,7 +309,7 @@ In our use case, throttling means limiting the number of requests made in a part
 
 What if there is new data coming in every once and then? In that case, we can use throttling to respond from cache for a limited time and then make an actual request after the specified time period. [Axios-extensions](https://github.com/kuitos/axios-extensions) comes with a **throttleAdapterEnhancer** which can be used to throttle the network request in our application. If we are using throttling, we can avoid using a persistent cache.
  
-> keep in mind it is not recommended to use throttling for time-sensitive data. If your data changes quite often, your server is the only entity that knows about the data. Use cache headers instead to let the browser know about what chaching strategy to use.
+> keep in mind it is not recommended to use throttling for time-sensitive data. If your data changes quite often, your server is the only entity that knows about the data. Use cache headers instead to let the browser know about what caching strategy to use.
 
 ```javascript
 import axios from 'axios';
