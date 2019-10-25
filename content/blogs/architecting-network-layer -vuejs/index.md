@@ -110,7 +110,7 @@ import { getAllUsers, getUser } from '@/api/users.api';
 <hr/>
 
 ## 3. Making network requests inside Vuex actions
-Moving all the business logic into Vuex store, including all of your network requests makes the view components independent. We can use actions in our store to fetch the data and store it in the state object. Vuex actions are synchronous by default, but the only way to know if an action is complete is by returning a Promise. We can commit the data to the store through mutations using actions. Here's an example of a store module with actions, which fetches the data and commits to the store.
+Moving all the business logic into Vuex store, including all of your network requests makes the view components independent. We can use actions in our store to fetch the data and store it in the state object. Vuex actions are synchronous by default, but the only way to know if an action is complete is by making your actions async or returning a promise. We can commit the data to the store through mutations using actions. Here's an example of a store module with actions, which fetches the data and commits to the store.
 
 ```javascript
 /*
@@ -131,14 +131,13 @@ const getters = {
 }
 
 const actions = {
-    fetchUsers({ commit }) {
-        return new Promise((resolve, reject) => {
-            getAllUsers().then(response => {
+    async fetchUsers({ commit }) {
+            try {
+                const response = getAllUsers();
                 commit('SET_USERS', response.data);
-                resolve();
-            }).catch(error => {
-                reject();
-            });
+            } catch (error) {
+                // handle the error here
+            }    
         });
     }
 }
@@ -178,23 +177,18 @@ export default {
     methods: {
         ...mapActions('Users', ['fetchUsers'])
     },
-    mounted: {
+    async mounted(): {
         // Make network request if the data is empty
         if ( this.getUsers.length === 0 ) {
             // set loading screen
             this.isLoading = true;
-
-            this.fetchUsers().then(() => {
-                this.isLoading = false;
-            }).catch(err => {
-                // show error screeen
-            });
+            await this.fetchUsers();
+            this.isLoading = false;
         }
     }
 }
 </script>
 ```
-
 <hr/>
 
 ## 4. Managing Auth Credentials using interceptors
@@ -274,6 +268,8 @@ httpClient.interceptors.response.use(responseInterceptor, errorInterceptor);
 ## 6. Caching and Throttling
 Axios adapters provide abilities to add superpowers into your HttpClient. Custom adapters are a clean way to enhance network communication in your application using caching and throttling. We'll be using [axios-extensions](https://github.com/kuitos/axios-extensions) to attach caching and throttling adapters to our httpClient.
 
+>Note that caching from client side is not recommended because your server has more knowledge on when the data changes. It is better to set the cache headers to tell the browser what caching strategy to use. You can follow the below examples, if you still want to use caching from the client side.
+
 Install axios-extensions
 ```shell
 $ npm install --save axios-extensions
@@ -311,7 +307,9 @@ getUsers(); // from cache
 ### Throttling
 In our use case, throttling means limiting the number of requests made in a particular amount of time. In large scale applications where each request to the server amounts to a larger cost of computing, caching is one way to achieve throttling. 
 
-What if there is new data coming in every once and then? In that case, we can use throttling to respond from cache for a limited time and then make an actual request after the specified time period. [Axios-extensions](https://github.com/kuitos/axios-extensions) comes with a **throttleAdapterEnhancer** which can be used to throttle the network request in our application. If we are using throttling, we can avoid using persistent cache for time-sensitive data.
+What if there is new data coming in every once and then? In that case, we can use throttling to respond from cache for a limited time and then make an actual request after the specified time period. [Axios-extensions](https://github.com/kuitos/axios-extensions) comes with a **throttleAdapterEnhancer** which can be used to throttle the network request in our application. If we are using throttling, we can avoid using a persistent cache.
+ 
+> keep in mind it is not recommended to use throttling for time-sensitive data. If your data changes quite often, your server is the only entity that knows about the data. Use cache headers instead to let the browser know about what chaching strategy to use.
 
 ```javascript
 import axios from 'axios';
