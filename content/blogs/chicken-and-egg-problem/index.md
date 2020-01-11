@@ -16,12 +16,12 @@ This is a known paradox we all have came across throughout our lifetime so far. 
 > "The dependency of value proposition of two separate entities on penetration into each other"
 
 In Digital products this is a pretty common problem. Here are a few examples to get a better understanding of this
-- If you don't have good product reviews, users won't buy online and if user's don't buy your products, you won't have reviews.
-- If you don't have apps for your platform, user's won't use it. If only users are present in your platform, developers will build apps.
+- If you don't have good product reviews, users won't buy online and if users don't buy your products, you won't have reviews.
+- If you don't have apps for your platform, users won't use it. If only users are present in your platform, developers will build apps.
 - If you don't have good posts on your social media platform, users won't use your platform. if you don't have users, there won't be any good posts/contents.
 
 ## How to solve this?
-If we look around, there are few well-known methods to solve "Chicken and Egg" strategical problem. We'll talk about some of of the strategies here, which can be easily understood.
+If we look around, there are few well-known methods to solve "Chicken and Egg" strategical problem. We'll talk about some of these strategies here, which can be easily understood.
 
 ###  1. Bribing the chicken
 Yes, you heard it right! bribing some of those chickens is one way to quickly get some eggs!
