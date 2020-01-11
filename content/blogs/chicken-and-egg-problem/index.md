@@ -50,7 +50,7 @@ If two of the above solution didn't work. The final hope is to make profit by se
 
 Introducing the product to a market which already have both the chicken and the egg to spare can solve the problem. Here, you aren't making profit by selling chicken or egg but the idea! You have an amazing startup idea, but it has the typical chicken and egg problem. Instead of solving this problem by yourself, you sell the startup to a company who already have solved the chicken and egg problem.
 
-If you are building a social network, selling your product to another social media company. If you are trying to build an e-commerce platform, selling your platform to another e-commerce company who already sorted their problems. This doesn't always needs to be "selling" your idea or the company, it can be wither partnering with other companies who already have the users or the content to solve your "chicken and egg" problem.
+If you are building a social network, selling your product to another social media company. If you are trying to build an e-commerce platform, selling your platform to another e-commerce company who already sorted their problems. This doesn't always needs to be "selling" your idea or the company, it can be just partnering with other companies who already have the users or the content to solve your "chicken and egg" problem.
 
 Coming back to the printer problem. You find people who are in need of the both printer and its cartridge. think of them as the chicken and egg to someone who already needs it. A farmer? in our case places where the printer is most used! Selling printers to corporate offices, schools and government organizations where they are ready to pay for both the printer and its cartridges.
 
