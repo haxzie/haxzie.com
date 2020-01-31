@@ -53,7 +53,7 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: [`Material Icons`]
+          families: [`Playfair Display`, `Lato`,`Material Icons`]
         }
       }
     },

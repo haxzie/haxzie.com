@@ -7,7 +7,7 @@
 
   h1 {
     color: var(--font-color); 
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Playfair Display', serif;
   }
 
   .excerpt {
@@ -17,6 +17,7 @@
     opacity: 0.7;
     line-height: 1.6em;
     letter-spacing: 0.01em;
+    font-family: 'Lato', serif;
 
     @include respond-below(md) {
       padding: 0px;

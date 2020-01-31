@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap');
 * {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 
@@ -20,7 +18,7 @@ body {
     line-height: 2em;
     // font-family: 'Poppins', sans-serif;
     // font-family: "Noto Sans", sans-serif;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Lato", sans-serif;
     color: var(--font-color, #3d3d3d);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -36,6 +34,10 @@ body {
       font-weight: 400;
       line-height: 1.5em;
       color: var(--font-color, #1a1a1a);
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', serif;
     }
 
     i {
