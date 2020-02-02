@@ -39,13 +39,13 @@ Previously, the soldiers couldn't make it to the hospitals because they were dea
 
 Another interesting story from World War II comes from the aircraft. The planes which successfully made it back to the base had several bullet holes. The idea was to add additional shields to the body of these planes so that they can survive more. The question is, Where should they put the shields and reinforce the aircraft body?
 
-When they took a closer look at the bullet hits on the planes, they were mostly on the wings and tails of the plane. So, by theory, it makes sense to reinforce these parts so that it can take more hits? Well, nope. Those planes which made it the base were just the survivors. This means the bullet hit points were trivial and were not dangerous/sensitive parts of the plane. Only when they took account of the planes which were destroyed, they got to know that the estimated hit points like the wings and tail were not the parts that needed reinforcements. Because the ones who got hit to the engine or cockpit never made it back to the base.
+When they took a closer look at the bullet hits on the planes, they were mostly on the wings and tails of the plane. So, by theory, it makes sense to reinforce these parts so that it can take more hits? Well, nope. Those planes which made it to the base were just the survivors. This means the bullet hit points were trivial and were not dangerous/sensitive parts of the plane. Only when they took account of the planes which were destroyed, they got to know that the estimated hit points like the wings and tail were not the parts that needed reinforcements. Because the ones who got hit to the engine or cockpit never made it back to the base.
 
 <image src="./bullet-holes.png"/>
 
 ## Let's not overlook the failures
 Steve Jobs, Bill Gates, and Mark Zuckerberg dropped out of college, so will you become a millionaire if you drop out too? Roughly 94% of the millionaires in the US are graduates, did anyone mention that? "We'll build the next Google, next uber, next Netflix", sounds a lot optimistic when you look at the companies which hit the ground before they could take off. If we look at them, they might give us more lessons to survive than the ones who survived. 
 
-Reading more and more about success can never guarantee you to become a success. But,  if you read more and more about failures, it might help you avoid those failures in your path to success. 
+Reading more and more about success can never guarantee you to be successfull. But,  if you read more and more about failures, it might help you avoid those failures in your path to success. 
 
 <hr/>
