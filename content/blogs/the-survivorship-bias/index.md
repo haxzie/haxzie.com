@@ -46,6 +46,10 @@ When they took a closer look at the bullet hits on the planes, they were mostly 
 ## Let's not overlook the failures
 Steve Jobs, Bill Gates, and Mark Zuckerberg dropped out of college, so will you become a millionaire if you drop out too? Roughly 94% of the millionaires in the US are graduates, did anyone mention that? "We'll build the next Google, next uber, next Netflix", sounds a lot optimistic when you look at the companies which hit the ground before they could take off. If we look at them, they might give us more lessons to survive than the ones who survived. 
 
+When you are working on building a product, it is necessary to look at every feature you add from all the directions. Maybe the big boys out there have a product with the same feature. But, that might not mean the same will make your customers happy about the feature. We need to look at the products which failed to make the feature usable, learn from them.
+
+You don't always need to get inspired by other products to build your product. You will never know when you will hit the roof and and regret the decisions you took. Instead, start with a wide range of examples, from successful products to the most dreadful failures, from the best to the worst, from large to small, everything will help you if you can see both sides of the spectrum.
+
 Reading more and more about success can never guarantee you to be successfull. But,  if you read more and more about failures, it might help you avoid those failures in your path to success. 
 
 <hr/>
