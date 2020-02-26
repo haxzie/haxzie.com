@@ -11,8 +11,26 @@ import Layout from '../../components/layout';
 
 class BlogTemplate extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            scrollPercentage: 0
+        }
+    }
+
+    handleScroll = () => {
+        const gatsbyApp = document.getElementById("___gatsby");
+        const winScroll = gatsbyApp.scrollTop;
+        const height = gatsbyApp.scrollHeight - gatsbyApp.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        this.setState({
+            scrollPercentage: scrolled
+        });
+    }
+
     componentDidMount() {
         document.getElementById("___gatsby").scrollTo(0, 0);
+        document.getElementById("___gatsby").addEventListener('scroll', this.handleScroll)
     }
 
     render() {
