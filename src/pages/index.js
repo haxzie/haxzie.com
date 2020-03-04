@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
@@ -8,7 +8,6 @@ import Hero from "../components/HomePage/Hero"
 import BlogsList from "../components/HomePage/BlogsList";
 
 const IndexPage = ({ data }) => {
-  const [isNavigationVisible, setNavigationVisibility] = useState(false)
   const blogs = data.allMarkdownRemark.nodes
 
   return (
