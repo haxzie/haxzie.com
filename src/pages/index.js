@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import NavigationBar from "../components/NavigationBar"
 import Hero from "../components/HomePage/Hero"
 import BlogsList from "../components/HomePage/BlogsList";
+import TabNavigation from "../components/TabNavigation";
 
 const IndexPage = ({ data }) => {
   const blogs = data.allMarkdownRemark.nodes
@@ -15,6 +16,7 @@ const IndexPage = ({ data }) => {
       <SEO title="Haxzie | Musthaq Ahamad" />
       <NavigationBar />
       <Hero />  
+      <TabNavigation/>
       <BlogsList blogs={blogs} />
     </Layout>
   )

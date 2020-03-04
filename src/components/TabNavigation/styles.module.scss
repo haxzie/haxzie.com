@@ -1,0 +1,39 @@
+.tab-wrapper {
+  background-color: var(--color-secondary-dark);
+
+  .tabList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    .tab {
+      color: white;
+      padding: 15px 20px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+      
+      a {
+        color: white;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        opacity: 0.5;
+        transition: 0.3s all ease-in-out;
+
+        &.active {
+          opacity: 1;
+        }
+
+        &:hover {
+          cursor: pointer;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
