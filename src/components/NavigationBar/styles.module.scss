@@ -1,0 +1,44 @@
+@import "../../styles/setup/mixins";
+.navigation-wrapper {
+  background: var(--color-secondary-dark);
+}
+
+.navigationBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 5px;
+    color: var(--font-color-dark);
+  
+    i {
+      color: var(--font-color-dark) !important;
+      font-size: 24px;
+      padding: 7
+    }
+  
+    h3 {
+      color: var(--font-color-dark);
+      font-size: 1.3em;
+      margin-left: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-family: 'Lato', sans-serif;
+    }
+  
+    @include respond-below(sm) {
+      padding: 5px 0px;
+    }
+  
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .logo-button {
+      width: 24px;
+      height: 24px;
+      padding: 10px;
+    }
+  }
