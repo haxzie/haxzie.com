@@ -52,13 +52,13 @@ We can use the `mapbox-gl` library to quickly add a map inside our component.
 
 ```javascript
 <template>
-  <div class="container">
+  <div class="map-container">
     <div id="map" ref="map"></div>
   </div>
 </template>
 
 <script>
-import Mapbox from "mapbox-gl";
+import mapboxgl from "mapbox-gl";
 export default {
     data() {
         return {
@@ -105,13 +105,13 @@ Using the `@deck.gl/mapbox` module we can create a custom Mapbox layer and inclu
 
 ```javascript
 <template>
-  <div class="container">
+  <div class="map-container">
     <div id="map" ref="map"></div>
   </div>
 </template>
 
 <script>
-import Mapbox from "mapbox-gl";
+import mapboxgl from "mapbox-gl";
 import { GeoJsonLayer } from "@deck.gl/layers";
 import { MapboxLayer } from "@deck.gl/mapbox";
 
@@ -224,7 +224,7 @@ While building a component in the above-mentioned method, we need to add both de
 Next, we need to initialize both the map and deck.gl instance in the component and connect the interactivity. We can use the mounted hook to initialize both of them and assign them to a non-reactive variable for future use-cases.
 
 ```javascript
-import deck from "@deck.gl/core";
+import { Deck } from "@deck.gl/core";
 import mapboxgl from "mapbox-gl";
 
 export default {
