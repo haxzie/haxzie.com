@@ -1,4 +1,5 @@
 ---
+type: blog
 date: 2019-09-29
 slug: /designing-sass-product-part-1
 tags:

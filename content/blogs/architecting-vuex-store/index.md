@@ -1,4 +1,5 @@
 ---
+type: blog
 date: 2019-10-13
 slug: /architecting-vuex-store-large-scale-vue-application
 tags:

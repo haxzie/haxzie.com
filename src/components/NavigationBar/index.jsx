@@ -11,6 +11,7 @@ import { Link } from 'gatsby';
 export default function NavigationBar({
   enableBackButton = false,
   title = "haxzie",
+  to = "/"
 }) {
   const links = [
     {
@@ -35,7 +36,7 @@ export default function NavigationBar({
       <Container>
         <div className={styles.navigationBar}>
           {enableBackButton ? (
-            <Link to="/">
+            <Link to={to}>
               <IconButton onClick={() => {}}>arrow_back</IconButton>
             </Link>
           ) : (

@@ -1,4 +1,5 @@
 ---
+type: blog
 date: 2020-02-26
 slug: /large-scale-geo-spatial-visualisation-with-vue-deck-gl
 tags:

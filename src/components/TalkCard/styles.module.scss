@@ -1,0 +1,42 @@
+@import '../../styles/setup/mixins';
+
+.talk-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  h1 {
+    color: var(--font-color); 
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .details-area {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 0;
+
+    .event-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .texts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+
+        .place-name {
+            padding: 0;
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+    }
+  }
+
+}

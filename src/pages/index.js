@@ -28,7 +28,7 @@ export const blogsQuery = graphql`
   query blogsQuery {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { published: { eq: true } } }
+      filter: { frontmatter: { published: { eq: true }}, fileAbsolutePath: {regex: "/blogs/.*[.]md$/"} }
     ) {
       totalCount
       nodes {

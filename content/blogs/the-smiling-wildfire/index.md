@@ -1,4 +1,5 @@
 ---
+type: blog
 date: 2020-01-13
 slug: /startup-smiling-wildfire
 tags:

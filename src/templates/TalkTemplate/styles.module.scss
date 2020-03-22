@@ -1,0 +1,114 @@
+@import "../../styles/setup/mixins";
+
+.talkTemplatePage {
+  position: relative;
+  padding-bottom: 100px;
+
+  .header {
+    background-color: var(--color-secondary-dark);
+
+    h3 {
+      color: var(--font-color-dark);
+      font-size: 1.3em;
+      margin-left: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-family: "Lato", sans-serif;
+    }
+  }
+
+  .hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .text-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 50px auto;
+      width: 100%;
+      max-width: 700px;
+
+      span.fc {
+        font-size: inherit;
+        letter-spacing: inherit;
+        color: var(--color-primary);
+      }
+
+      .heading {
+        color: var(--font-color-dark);
+        font-size: 2.5em;
+        padding: 7px 10px;
+        font-family: "Lato", sans-serifs;
+
+        span {
+          color: var(--font-color-dark);
+        }
+
+        @include respond-below(sm) {
+          font-size: 2em;
+          //line-height: 50px;
+        }
+      }
+    }
+  }
+
+  .video-container {
+    width: 100%;
+    max-height: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+
+    .videoPlayer {
+      height: 600px;
+      width: 100%;
+      background-color: black;
+
+      @include respond-below(sm) {
+        height: 300px;
+        //line-height: 50px;
+      }
+    }
+  }
+
+  .content-container {
+    width: 90%;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 0px auto;
+
+    .details-area {
+      display: flex;
+      flex-direction: row;
+      padding: 15px 0;
+
+      .event-image {
+        width: 70px;
+        height: 70px;
+      }
+
+      .texts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+
+        .place-name {
+          padding: 0;
+          margin: 0;
+          font-size: 1.1em;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .date {
+        padding: 20px 0;
+    }
+  }
+}

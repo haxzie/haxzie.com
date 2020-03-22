@@ -1,4 +1,5 @@
 ---
+type: blog
 date: 2019-09-04T04:54:53Z
 slug: /building-geo-spatial-dashboards-user-centric-design
 tags:
