@@ -9,7 +9,7 @@
 
     h3 {
       color: var(--font-color-dark);
-      font-size: 1.3em;
+      font-size: 1.2em;
       margin-left: 15px;
       font-weight: bold;
       text-transform: uppercase;
@@ -40,7 +40,7 @@
 
       .heading {
         color: var(--font-color-dark);
-        font-size: 2.5em;
+        font-size: 2em;
         padding: 7px 10px;
         font-family: "Lato", sans-serifs;
 
@@ -49,7 +49,7 @@
         }
 
         @include respond-below(sm) {
-          font-size: 2em;
+          font-size: 1.8em;
           //line-height: 50px;
         }
       }
@@ -63,6 +63,11 @@
     margin: 20px auto;
     display: flex;
     flex-direction: column;
+
+    @include respond-below(sm) {
+      margin: 0 0 20px 0;
+      //line-height: 50px;
+    }
 
     .videoPlayer {
       height: 600px;
