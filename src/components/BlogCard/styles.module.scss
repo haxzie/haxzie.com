@@ -7,16 +7,20 @@
 
   h1 {
     color: var(--font-color); 
-    font-family: 'Playfair Display', serif;
+    font-family: 'Lato', sans-serif;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   .excerpt {
     margin: 10px 0;
     padding: 0;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     opacity: 0.7;
-    letter-spacing: 0.01em;
-    font-family: 'Lato', serif;
+    // letter-spacing: 0.01em;
+    font-family: 'Lato', sans-serif;
 
     @include respond-below(md) {
       padding: 0px;
@@ -26,6 +30,5 @@
   .date-label {
       opacity: 0.5;
       padding-top: 10px;
-      letter-spacing: 5px;
   }
 }

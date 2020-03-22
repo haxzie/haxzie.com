@@ -7,6 +7,9 @@ import Container from "../../components/Container"
 import Layout from "../../components/Layout"
 import NavigationBar from "../../components/NavigationBar"
 
+function getReadingTime(wordCount) {
+  return Math.ceil(wordCount/200);
+}
 class BlogTemplate extends React.Component {
   constructor(props) {
     super(props)
@@ -36,6 +39,7 @@ class BlogTemplate extends React.Component {
     const { data } = this.props
     const metaData = data.markdownRemark.frontmatter
     const contents = data.markdownRemark.html
+    const wordCount = data.markdownRemark.wordCount
     return (
       <Layout>
         <SEO
@@ -70,7 +74,7 @@ class BlogTemplate extends React.Component {
           <div className={styles.blogArea}>
             <div className={styles.metaArea}>
               <label>{metaData.date}</label>
-              <label>5 mins read</label>
+              <label>{getReadingTime(wordCount.words)} mins read</label>
             </div>
             <div
               className={styles.blogContents}
@@ -90,6 +94,9 @@ export const query = graphql`
   query BlogDataQuery($path: String!) {
     markdownRemark(frontmatter: { slug: { eq: $path } }) {
       html
+      wordCount {
+        words
+      }
       frontmatter {
         slug
         title

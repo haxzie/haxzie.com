@@ -2,6 +2,11 @@ import React from 'react';
 import styles from './styles.module.scss';
 import { Link } from 'gatsby';
 
+function getReadingTime(wordCount) {
+    return Math.ceil(wordCount/200);
+} 
+
+
 function BlogCard({ data }) {
     const metaData = data.frontmatter;
     return (
@@ -11,7 +16,7 @@ function BlogCard({ data }) {
             </Link>
             <p className={styles.excerpt}>{metaData.description}</p>
             <div>
-                <label className={styles.dateLabel}>{metaData.date} • 5 mins read</label>
+                <label className={styles.dateLabel}>{metaData.date} &nbsp; {getReadingTime(data.wordCount.words)} mins read</label>
             </div>
         </div>
     )

@@ -49,6 +49,9 @@ export const blogsQuery = graphql`
             }
           }
         }
+        wordCount {
+          words
+        }
       }
     }
   }
