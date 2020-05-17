@@ -1,0 +1,41 @@
+.projectCard {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    
+    .title {
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .chits {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+
+        .chit {
+            padding: 0px 7px;
+            font-size: 0.8rem;
+            background-color: rgb(219, 219, 219);
+            line-height: 1.2rem;
+            border-radius: 2px;
+            margin: 5px 5px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .githubLink {
+        color: var(--color-primary);
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
