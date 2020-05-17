@@ -12,7 +12,7 @@ const Talks = ({ data }) => {
   const talks = data.allMarkdownRemark.nodes
   return (
     <Layout>
-      <SEO title="Haxzie | Musthaq Ahamad" />
+      <SEO title="Haxzie's Talks" description="All the talks and workshops I have presented"/>
       <NavigationBar />
       <Hero />
       <TabNavigation />
