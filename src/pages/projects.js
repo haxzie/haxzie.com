@@ -7,7 +7,6 @@ import Hero from "../components/HomePage/Hero"
 import TabNavigation from "../components/TabNavigation"
 import ProjectsList from "../components/HomePage/ProjectsList"
 import { graphql } from "gatsby"
-import SEO from "../components/seo"
 
 const Projects = ({ data }) => {
   const pjs = data.allMarkdownRemark.nodes
@@ -37,7 +36,6 @@ export const projectsQuery = graphql`
         fileAbsolutePath: { regex: "/content/projects/.*[.]md$/" }
       }
     ) {
-      totalCount
       nodes {
         id
         frontmatter {
