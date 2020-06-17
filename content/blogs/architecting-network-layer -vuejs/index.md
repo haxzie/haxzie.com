@@ -225,6 +225,13 @@ In the below example, I am using [vue-notifications](https://github.com/euvl/vue
 ```javascript
 // interceptor to catch errors
 const errorInterceptor = error => {
+
+    // check if it's a server error
+    if (!error.response) {
+      notify.warn('Network/Server error');
+      return Promise.reject(error);
+    }
+
     // all the error responses
     switch(error.response.status) {
         case 400:
