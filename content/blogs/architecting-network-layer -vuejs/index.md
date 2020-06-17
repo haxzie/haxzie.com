@@ -74,7 +74,7 @@ const httpClient = axios.create({
 <hr/>
 
 ## 2. Structuring your API endpoints
-As per REST design principles, most of our endpoints might have CURD operations associated with it. So, grouping together the endpoint with all it's request methods is one way to organize your API calls. We can import the required HTTP-client and export all the required requests as methods. Here's an example of grouping all the requests related to `Users` into a single file. 
+As per REST design principles, most of our endpoints might have CRUD operations associated with it. So, grouping together the endpoint with all it's request methods is one way to organize your API calls. We can import the required HTTP-client and export all the required requests as methods. Here's an example of grouping all the requests related to `Users` into a single file. 
 
 ```javascript
 import httpClient from './httpClient';
