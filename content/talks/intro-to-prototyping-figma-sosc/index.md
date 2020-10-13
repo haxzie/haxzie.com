@@ -1,6 +1,6 @@
 ---
 type: talk
-date: 2020-09-2
+date: 2020-09-02
 slug: /talks/intro-to-protyping-with-figma-sosc
 tags:
 - Design
