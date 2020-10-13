@@ -1,17 +1,20 @@
 html,
 body,
-#___gatsby {
+#___gatsby,
+#gatsby-focus-wrapper {
   height: 100%;
   overflow-x: hidden;
   background-color: var(--color-secondary);
+  
 }
 
 body {
   margin: 0px;
+  height: 100%;
 }
 
 div[role="group"][tabindex] {
-  height: 100%;
+  min-height: 100%;
 }
 
 // border and padding controls
