@@ -6,7 +6,7 @@ tags:
 - Design
 - Figma
 - UI/UX
-title: "Intro to prototyping with Figma"
+title: "Intro to prototyping with Figma Workshop - Devhost2020"
 description: Figma is a web-first, collaborative, and powerful vector design tool. It's arguably the best tool in the design industry used to design wireframes and prototypes. In this workshop, we'll learn the basics, learn how to create design systems and build a full-fledged prototype using Figma.
 event: "SOSC devhost:20"
 event_link: https://sosc.org.in

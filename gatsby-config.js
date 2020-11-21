@@ -46,7 +46,7 @@ module.exports = {
         background_color: `#151a24`,
         theme_color: `#151a24`,
         display: `minimal-ui`,
-        icon: `src/images/haxzie.png`, // This path is relative to the root of the site.
+        icon: `./src/images/haxzie.png`, // This path is relative to the root of the site.
       },
     },
     {
